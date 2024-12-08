@@ -1,0 +1,17 @@
+services:
+  db:
+    build:
+      context: ./db
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+    volumes:
+      - ./initdb:/docker-entrypoint-initdb.d
+      - db-data:/var/lib/postgresql/data
+      - ./postgresql.conf:/etc/postgresql/postgresql.conf
+
+volumes:
+  db-data:

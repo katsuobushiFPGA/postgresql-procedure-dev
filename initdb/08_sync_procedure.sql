@@ -13,7 +13,7 @@ DECLARE
     deleted_count INTEGER := 0;
     upsert_count INTEGER := 0;
 BEGIN
-    RAISE NOTICE 'UPSERT版正しい同期処理を開始します...';
+    RAISE NOTICE '差分チェック処理を開始します...';
     
     -- テーブルAのレコード数を取得
     SELECT COUNT(*) INTO total_count FROM t_data;

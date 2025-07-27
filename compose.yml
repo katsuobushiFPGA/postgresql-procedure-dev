@@ -12,6 +12,7 @@ services:
       - ./initdb:/docker-entrypoint-initdb.d
       - db-data:/var/lib/postgresql/data
       - ./postgresql.conf:/etc/postgresql/postgresql.conf
+      - ./tests:/tests
 
 volumes:
   db-data:

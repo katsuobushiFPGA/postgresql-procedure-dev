@@ -84,6 +84,6 @@ BEGIN
     
 EXCEPTION
     WHEN OTHERS THEN
-        RAISE EXCEPTION 'UPSERT版同期処理中にエラーが発生しました: %', SQLERRM;
+        RAISE EXCEPTION '差分チェック処理中にエラーが発生しました: %', SQLERRM;
 END;
 $$;

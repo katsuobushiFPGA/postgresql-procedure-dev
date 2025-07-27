@@ -1,1 +1,4 @@
 CREATE EXTENSION IF NOT EXISTS pldbgapi;
+
+-- pgTAP拡張機能を有効化（テスト用）
+CREATE EXTENSION IF NOT EXISTS pgtap;
